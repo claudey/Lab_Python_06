@@ -61,3 +61,27 @@ Spain.addPlayer(Torres)
 Portugal.addPlayer(Ronaldo)
 Spain.show()
 Portugal.show()
+
+class Match:
+    def __init__(self, homeTeam, awayTeam, date, homeScores, awayScores):
+        self.homeTeam = homeTeam
+        self.awayTeam = awayTeam
+        self.matchDate = date
+        self.homeScores = {}
+        self.awayScores = {}
+
+    def homeScore(self):
+        sumHomeScores = sum(self.homeScores)
+        if self.homeScores == 0:
+            return 0
+        else:
+            return sumHomeScores
+
+    def awayScore(self):
+        sumAwayScores = sum(self.awayScores)
+        if self.awayScores == 0:
+            return 0
+        else:
+            return sumAwayScores
+
+    def winner(self):
